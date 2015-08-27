@@ -3,8 +3,9 @@ package com.hzh.nc.model;
 import java.util.List;
 
 public class Class extends Group {
-	/** 入学年份. */
+	/** 鍏ュ骞翠唤. */
 	private int entranceYear;
+	//TODO Week reference?
 	private List<User> students;
 
 	public Class(String name, int year) {

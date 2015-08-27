@@ -18,6 +18,7 @@ public class User {
 	private String job;
 	// friend's id.
 	private List<User> friends;
+	private List<School> schools;
 
 	public long getId() {
 		return id;
@@ -113,6 +114,14 @@ public class User {
 
 	public void setFriends(List<User> friends) {
 		this.friends = friends;
+	}
+
+	public List<School> getSchools() {
+		return schools;
+	}
+
+	public void setSchools(List<School> schools) {
+		this.schools = schools;
 	}
 
 	@Override

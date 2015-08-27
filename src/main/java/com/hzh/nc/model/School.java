@@ -8,6 +8,23 @@ public class School extends Group {
 	}
 
 	private List<Class> classes;
-	/** 区别同名学校*/
+    /** 閫氳繃鍦板潃鍖哄垎鍚屽悕瀛︽牎.*/
 	private Address address;
+	public List<Class> getClasses() {
+		return classes;
+	}
+	public void setClasses(List<Class> classes) {
+		this.classes = classes;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	@Override
+	public String toString() {
+		return "School [classes=" + classes + ", address=" + address + "]";
+	}
+	
 }
