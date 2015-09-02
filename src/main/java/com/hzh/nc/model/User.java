@@ -3,28 +3,36 @@ package com.hzh.nc.model;
 import java.util.Date;
 import java.util.List;
 
+import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+import org.mongodb.morphia.annotations.Reference;
+@Entity
 public class User {
-	private long id;
+	@Id
+	private ObjectId id;
 	private String name;
 	private String nickname;
-	/** ͷ��. */
+	/** 头像. */
 	private String avatar;
 	private Sex sex;
 	private Date birthday;
 	private Address birthplace;
 	private Address currentResidence;
 	private String password;
+	@Reference(lazy=true)
 	private List<Interest> interests;
 	private String job;
-	// friend's id.
+	@Reference(lazy=true)
 	private List<User> friends;
+	@Reference(lazy=true)
 	private List<School> schools;
 
-	public long getId() {
+	public ObjectId getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(ObjectId id) {
 		this.id = id;
 	}
 

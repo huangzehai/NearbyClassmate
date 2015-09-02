@@ -1,5 +1,7 @@
 package com.hzh.nc.dao;
 
+import org.bson.types.ObjectId;
+
 import com.hzh.nc.model.User;
 
 public interface UserDao {
@@ -7,5 +9,5 @@ public interface UserDao {
    void updateUser(User user);
    void deleteUser(User User);
    void getUser(String mobile);
-   void getUser(long id);
+   void getUser(ObjectId id);
 }
