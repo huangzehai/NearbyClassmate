@@ -27,6 +27,7 @@ public class User {
 	private List<User> friends;
 	@Reference(lazy=true)
 	private List<School> schools;
+	private String mobile;
 
 	public ObjectId getId() {
 		return id;
@@ -132,11 +133,20 @@ public class User {
 		this.schools = schools;
 	}
 
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", nickname=" + nickname + ", avatar=" + avatar + ", sex=" + sex
 				+ ", birthday=" + birthday + ", birthplace=" + birthplace + ", currentResidence=" + currentResidence
-				+ ", password=" + password + ", interests=" + interests + ", job=" + job + ", friends=" + friends + "]";
+				+ ", password=" + password + ", interests=" + interests + ", job=" + job + ", friends=" + friends
+				+ ", schools=" + schools + ", mobile=" + mobile + "]";
 	}
 
 }

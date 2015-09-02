@@ -8,6 +8,10 @@ public class School extends Group {
 	public School(String name) {
 		super(name);
 	}
+	
+	public School(){
+		
+	}
 
 	private List<Class> classes;
     /** 通过地址区分同名学校.*/

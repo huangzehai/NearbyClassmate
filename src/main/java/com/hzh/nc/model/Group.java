@@ -15,6 +15,10 @@ public class Group {
 	public Group(String name) {
 		this.name = name;
 	}
+	
+	public Group(){
+		
+	}
 
 	public String getName() {
 		return name;
