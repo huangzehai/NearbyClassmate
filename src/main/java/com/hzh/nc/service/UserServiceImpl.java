@@ -11,29 +11,16 @@ import com.hzh.nc.model.User;
 public class UserServiceImpl implements UserService {
    @Resource
    private UserDao userDao;
-	public void addUser(User user) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void updateUser(User user) {
-		// TODO Auto-generated method stub
-		
+	public void addOrSaveUser(User user) {
+		userDao.addOrSaveUser(user);
 	}
 
 	public void deleteUser(User User) {
-		// TODO Auto-generated method stub
-		
+		userDao.deleteUser(User);
 	}
 
 	public void getUser(String mobile) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void getUser(long id) {
-		// TODO Auto-generated method stub
-		
+		userDao.getUser(mobile);
 	}
 
 }
