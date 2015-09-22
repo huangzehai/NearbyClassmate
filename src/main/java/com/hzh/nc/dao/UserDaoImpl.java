@@ -10,8 +10,13 @@ import com.hzh.nc.model.User;
 @Repository
 public class UserDaoImpl implements UserDao {
 
-	@Autowired
+
 	private Datastore datastore;
+	
+	@Autowired
+	public UserDaoImpl(Datastore datastore){
+		this.datastore=datastore;
+	}
 	
 	public void addOrSaveUser(User user) {
 		if (user.getFriends() != null) {
